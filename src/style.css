@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: white;
+  background: black;
+  overflow-x: hidden;
+}
+
+canvas#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  z-index: 1;
+  padding: 2rem;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+  transition: all 0.3s ease;
+}
+
+/* Alternate cards left and right */
+.card:nth-child(even) {
+  align-self: flex-start;
+}
+.card:nth-child(odd) {
+  align-self: flex-end;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a {
+  color: cyan;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
